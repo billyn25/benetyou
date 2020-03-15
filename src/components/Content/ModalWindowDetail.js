@@ -52,7 +52,7 @@ function ModalWindowDetail({id, mode}) {
 
     let path;
     if (details.poster_path !== null) {
-        path = "https://image.tmdb.org/t/p/w780" + details.poster_path
+        path = "https://image.tmdb.org/t/p/w780/" + details.poster_path
     } else {
         path = img;
     }
