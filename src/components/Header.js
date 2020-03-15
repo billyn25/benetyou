@@ -23,7 +23,7 @@ function Header({mode,searcHeader}) {
     return (
         <header>
         <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand pr-2 pl-2" href="#"><span className="colorPinkLetra">B</span>e<span className="colorPinkLetra">N</span>et<span className="colorPinkLetra">Y</span>ou</a>
+            <a className="navbar-brand pr-2 pl-2" href="https://benetyou.netlify.com/"><span className="colorPinkLetra">B</span>e<span className="colorPinkLetra">N</span>et<span className="colorPinkLetra">Y</span>ou</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
                     aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
