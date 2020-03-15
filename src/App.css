@@ -121,6 +121,37 @@ h2 {font-size: 20px;}
   background-color: #ffffff !important;
 }
 
+footer {
+  background-color: #444444;
+  margin-top: 0px;
+  padding: 50px 80px 50px 80px;
+}
+
+.uk-pagination {
+  padding:5px;
+  font-size: 1.1em;
+  font-weight: bolder;
+  color: white;
+  padding-left: 0px;
+}
+
+.uk-pagination li  {
+  width: 55px;
+  padding: 8px;
+  background: rgba(19, 19, 19, 0.48);
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.uk-pagination li:hover{
+  color: white;
+  background-color: #ff005d;
+}
+
+ul .selectedPage {
+  color: white;
+  background-color: #ff005d;
+}
+
 @media only screen
 and (min-width: 0px)
 and (max-width: 1000px)

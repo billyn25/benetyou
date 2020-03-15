@@ -1,5 +1,6 @@
 import React, {useState,useContext} from 'react';
 import {ContextApiId} from '../../Context'
+import img from '../../img/empty_img.jpg';
 
 function NormalBannerLi({datos}) {
 
@@ -8,7 +9,13 @@ function NormalBannerLi({datos}) {
     const [isHovering, setIsHovering] = useState(false);
 
     const {poster_path, title, vote_average, overview,name,id} = datos
-    let path = "https://image.tmdb.org/t/p/w780";
+
+    let path;
+    if (poster_path !== null) {
+        path = "https://image.tmdb.org/t/p/w780" + poster_path
+    } else {
+        path = img;
+    }
 
     let percent = vote_average * 10;
     let stringCircle = "c100 p" + percent + " small";
@@ -56,7 +63,7 @@ function NormalBannerLi({datos}) {
         <li onMouseOver={handleMouseHover} onMouseLeave={handleMouseOut} onClick={()=>idData(id)}>
             <div className="uk-panel">
                 <div className="uk-card-media-top big">
-                    <img className="small" src={path + poster_path} alt={title}/>
+                    <img className="small" src={path} alt={title}/>
                     {overlayInfo}
                 </div>
             </div>

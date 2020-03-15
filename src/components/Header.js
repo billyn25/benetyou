@@ -1,9 +1,9 @@
 import React,{useState} from 'react';
 
-function Header({mode}) {
+function Header({mode,searcHeader}) {
 
     const [selection, setSelection] = useState('films');
-    const [word, setWord] = useState('films');
+    const [word, setWord] = useState('');
 
     let changeMode = (select) => {
         mode(select)
@@ -11,14 +11,19 @@ function Header({mode}) {
     }
 
     let searchW = (e) => {
-        console.log(word)
         e.preventDefault()
+        searcHeader(word)
+    }
+
+    //reset search screen
+    if (word ==='') {
+        searcHeader('')
     }
 
     return (
         <header>
         <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" href="#">BillyNet</a>
+            <a className="navbar-brand pr-2 pl-2" href="#"><span className="colorPinkLetra">B</span>e<span className="colorPinkLetra">N</span>et<span className="colorPinkLetra">Y</span>ou</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
                     aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>

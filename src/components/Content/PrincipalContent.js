@@ -9,7 +9,7 @@ import {
     url_tv_popular,
     url_tv_crime,
     url_tv_Scifi,
-    url_tv_docu, url_mistery, url_tv_comedy
+    url_tv_docu, url_mistery, url_tv_comedy, url_western, url_tv_music, url_tv_romance
 } from '../../api_key'
 import NormalBannerMid from "./NormalBannerMid";
 import LoadingSpinner from "../LoadingSpinner";
@@ -72,11 +72,17 @@ function PrincipalContent({mode}) {
             <h1 className="mb-0 mt-4 text-white bg-dark pl-5 pr-5 pt-2 pb-2 w-100 text-center">{mode === 'films' ? 'Románticas' : 'Documentales'}</h1>
             <NormalBannerMid
                 url={mode === 'films' ? url_romantic : url_tv_docu} mode={mode}/>
-            {/* end mistery banner */} {/* cinema banner */}
+            {/* end romantic banner */}
+            {/* mistery banner */}
             <h1 className="mb-0 mt-4 text-white bg-dark pl-5 pr-5 pt-2 pb-2 w-100 text-center">{mode === 'films' ? 'De misterio' : 'De comedia'}</h1>
             <NormalBannerMid
                 url={mode === 'films' ? url_mistery : url_tv_comedy} mode={mode}/>
             {/* end mistery banner */}
+            {/* western banner */}
+            <h1 className="mb-0 mt-4 text-white bg-dark pl-5 pr-5 pt-2 pb-2 w-100 text-center">{mode === 'films' ? 'Del viejo oeste' : 'Rómanticas'}</h1>
+            <NormalBannerMid
+                url={mode === 'films' ? url_western : url_tv_romance} mode={mode}/>
+            {/* end western banner */}
         </section>
     );
 }

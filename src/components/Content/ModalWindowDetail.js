@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios'
 import {api_key} from '../../api_key'
+import img from "../../img/empty_img.jpg";
 
-let videoId;
 
 function ModalWindowDetail({id, mode}) {
 
@@ -28,6 +28,7 @@ function ModalWindowDetail({id, mode}) {
         await axios.get(url)
             .then(function (response) {
                 setDetails(response.data);
+                console.log(response.data)
             })
             .catch(function (error) {
                 console.log(error);
@@ -37,29 +38,35 @@ function ModalWindowDetail({id, mode}) {
             .then(function (response) {
                 let {credits} = response.data;
                 setCredits(credits.crew);
-                console.log(credits.crew)
             })
             .catch(function (error) {
                 console.log(error);
             });
     }
 
-    //key video yputube
+    //key video youtube
+    let videoId;
     Object.keys(details.videos || {}).map(key => (
         videoId = (Object.keys(details.videos.results[0] || {}).length > 0 ? details.videos.results[0].key : ""
         )))
 
-    let path = "https://image.tmdb.org/t/p/w780";
+    let path;
+    if (details.poster_path !== null) {
+        path = "https://image.tmdb.org/t/p/w780" + details.poster_path
+    } else {
+        path = img;
+    }
+
     let urlVideo = `http://www.youtube.com/embed/${videoId}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1`;
 
-    //filter direcctor
+    //filter director
     const result = credits.filter(({job}) => job === "Director")
 
     return (
         <div className="card">
             <div className="row no-gutters">
                 <div className="col-md-4">
-                    <img src={path + details.poster_path} className="card-img" alt={details.title}/>
+                    <img src={path} className="card-img" alt={details.title}/>
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
@@ -68,7 +75,8 @@ function ModalWindowDetail({id, mode}) {
                         <p className="card-text">{details.overview ? details.overview : 'No hay información sobre este título'}</p>
                         <p className="card-text">
                             {Object.keys(result).map(key => (
-                                <small className="text-muted">{`${result[key].name}. `}</small>
+                                <small
+                                    className="text-muted">{`${mode === "films" ? details.release_date.substring(0, 4) : details.first_air_date.substring(0, 4)}, ${result[key].name}. `}</small>
                             ))}
                             <small
                                 className="text-muted font-weight-bold">{mode === "films" ? `${details.runtime} min.` : `${details.number_of_seasons} Temporadas.`}</small>
