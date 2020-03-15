@@ -41,11 +41,10 @@ h2 {font-size: 20px;}
 
 .section_sliders img.big{
   width: 100%;
-  height: 650px;
+  height: 600px;
   margin: 0;
   padding: 0;
   object-fit: cover;
-  object-position: 0 0;
 }
 
 .section_sliders img.small{
