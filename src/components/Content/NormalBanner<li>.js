@@ -41,7 +41,7 @@ function NormalBannerLi({datos}) {
     if (isHovering) {
 
         let cadena;
-        overview !== "" ? cadena = overview.substr(0, 385) + "..." : cadena = "No hay información sobre este título"
+        overview !== "" ? cadena = overview.substr(0, 250) + "..." : cadena = "No hay información sobre este título"
 
         overlayInfo =
             <React.Fragment>

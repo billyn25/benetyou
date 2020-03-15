@@ -166,5 +166,23 @@ and (-webkit-min-device-pixel-ratio: 2) {
     margin-top: 60px;
     max-width: 100%;
   }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .uk-position-relative,.uk-width-3-5 {
+    margin: 0;
+    padding: 0;
+    width:100%;
+  }
+
+  h3 {
+    font-size: 1.6em !important;
+    font-weight: bolder;
+  }
 }
 
