@@ -1,4 +1,4 @@
-export const api_key = process.env.REACT_APP_API_KEY;
+export const api_key = "0e90da3d1d5b2554b95ae8e121183b3a";
 
 export const url_popular = `http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${api_key}&language=es&region=ES&region=ES`;
 export const url_terror = `http://api.themoviedb.org/3/discover/movie?&sort_by=popularity.desc&with_genres=27&api_key=${api_key}&language=es&region=ES`;
