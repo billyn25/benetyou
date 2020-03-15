@@ -30,8 +30,8 @@ function SearchContent({word, mode}) {
 
         setLoad(true);
 
-        let url = mode === 'films' ? `http://api.themoviedb.org/3/search/movie?&query=${word}&api_key=${api_key}&language=es&page=${pagina}&region=ES` :
-            `http://api.themoviedb.org/3/search/tv?&query=${word}&api_key=${api_key}&language=es&page=${pagina}&region=ES`;
+        let url = mode === 'films' ? `https://api.themoviedb.org/3/search/movie?&query=${word}&api_key=${api_key}&language=es&page=${pagina}&region=ES` :
+            `https://api.themoviedb.org/3/search/tv?&query=${word}&api_key=${api_key}&language=es&page=${pagina}&region=ES`;
 
         await axios.get(url)
             .then(function (response) {

@@ -21,7 +21,7 @@ function ModalWindowDetail({id, mode}) {
         let urlCredits;
 
         url = mode === 'films' ? `https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}&append_to_response=videos&language=es` :
-            `http://api.themoviedb.org/3/tv/${id}?api_key=${api_key}&append_to_response=videos&language=es`
+            `https://api.themoviedb.org/3/tv/${id}?api_key=${api_key}&append_to_response=videos&language=es`
 
         urlCredits = `https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}&append_to_response=credits`;
 
