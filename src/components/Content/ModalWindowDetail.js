@@ -52,12 +52,12 @@ function ModalWindowDetail({id, mode}) {
 
     let path;
     if (details.poster_path !== null) {
-        path = "https://image.tmdb.org/t/p/w780/" + details.poster_path
+        path = "https://image.tmdb.org/t/p/w780" + details.poster_path
     } else {
         path = img;
     }
 
-    let urlVideo = `http://www.youtube.com/embed/${videoId}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1`;
+    let urlVideo = `https://www.youtube.com/embed/${videoId}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1`;
 
     //filter director
     const result = credits.filter(({job}) => job === "Director")
