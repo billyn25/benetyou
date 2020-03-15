@@ -36,6 +36,7 @@ h2 {font-size: 20px;}
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .section_sliders img.big{
@@ -80,7 +81,7 @@ h2 {font-size: 20px;}
 }
 
 .uk-overlay {
-  padding: 15px;
+  padding:15px;
 }
 
 .colorPink {
@@ -172,12 +173,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-
-  .uk-position-relative,.uk-width-3-5 {
-    margin: 0;
-    padding: 0;
-    width:100%;
   }
 
   h3 {
