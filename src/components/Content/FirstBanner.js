@@ -12,7 +12,7 @@ function FirstBanner({datos}) {
     overview !== "" ? cadena = overview.substr(0, 385) + "..." : cadena = "No hay información sobre este título"
 
     let percent = vote_average * 10;
-    let stringCircle = "c100 p" + percent + " small";
+    let stringCircle = "c100 p" + percent + " small mr-2";
 
     //mandar id por context a app.js
     let idData = (id) => {
