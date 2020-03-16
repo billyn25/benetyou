@@ -178,5 +178,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
     font-size: 1.4em !important;
     font-weight: bolder;
   }
+
+  .section_sliders img.big{
+    height: 590px;
+  }
 }
 
