@@ -12,7 +12,7 @@ function FirstBanner({datos}) {
     overview !== "" ? cadena = overview.substr(0, 385) + "..." : cadena = "No hay información sobre este título"
 
     let percent = vote_average * 10;
-    let stringCircle = "c100 p" + percent + " small mr-2";
+    let stringCircle = "c100 p" + percent + " small";
 
     //mandar id por context a app.js
     let idData = (id) => {
@@ -24,7 +24,7 @@ function FirstBanner({datos}) {
             <div className="uk-panel">
                 <img className="big" src={path + poster_path} alt={title}/>
                 <div className="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                    <div className="d-flex justify-content-center">
+                    <div className="d-flex justify-content-center flex-wrap align-items-center">
                         <div className={stringCircle}>
                             <span>{vote_average}</span>
                             <div className="slice">
