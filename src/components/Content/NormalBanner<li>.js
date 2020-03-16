@@ -18,7 +18,7 @@ function NormalBannerLi({datos}) {
     }
 
     let percent = vote_average * 10;
-    let stringCircle = "c100 p" + percent + " small";
+    let stringCircle = "c100 p" + percent + " small mr-2";
 
     //pasar por encima el raton
     let handleMouseHover = () => {
