@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import {ContextApiId} from '../../Context'
+import img from '../../img/empty_img.jpg';
 
 function FirstBanner({datos}) {
 
@@ -22,7 +23,8 @@ function FirstBanner({datos}) {
     return (
         <li className="uk-width-3-5" onClick={()=>idData(id)}>
             <div className="uk-panel">
-                <img className="big" src={path + poster_path} alt={title}/>
+                <img className="big" src={path + poster_path} alt={title} onError={
+                    (e) => e.target.src = img}/>
                 <div className="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
                     <div className="d-flex justify-content-center flex-wrap align-items-center">
                         <div className={stringCircle}>

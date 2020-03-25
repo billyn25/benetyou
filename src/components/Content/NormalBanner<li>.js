@@ -63,7 +63,8 @@ function NormalBannerLi({datos}) {
         <li onMouseOver={handleMouseHover} onMouseLeave={handleMouseOut} onClick={()=>idData(id)}>
             <div className="uk-panel">
                 <div className="uk-card-media-top big">
-                    <img className="small" src={path} alt={title}/>
+                    <img className="small" src={path} alt={title} onError={
+                        (e) => e.target.src = img}/>
                     {overlayInfo}
                 </div>
             </div>

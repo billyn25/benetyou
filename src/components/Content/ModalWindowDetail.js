@@ -66,7 +66,8 @@ function ModalWindowDetail({id, mode}) {
         <div className="card">
             <div className="row no-gutters">
                 <div className="col-md-4">
-                    <img src={path} className="card-img" alt={details.title}/>
+                    <img src={path} className="card-img" alt={details.title} onError={
+                        (e) => e.target.src = img}/>
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
