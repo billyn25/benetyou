@@ -40,8 +40,8 @@ function Header({mode,searcHeader}) {
                 </ul>
                 <form className="form-inline my-2 my-lg-0" onSubmit={searchW}>
                     <input className="form-control mr-sm-2" type="text" onChange={e => setWord(e.target.value)}
-                           value={word} placeholder="Buscar"/>
-                    <button className="btn btn-secondary my-2 my-sm-0" >Buscar</button>
+                           value={word} placeholder="Búsqueda"/>
+                    <button className="btn btn-secondary my-2 my-sm-0">Buscar</button>
                 </form>
             </div>
         </nav>

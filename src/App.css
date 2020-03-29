@@ -152,6 +152,10 @@ ul .selectedPage {
   background-color: #ff005d;
 }
 
+.form-control:focus {
+      width: 300px;
+}
+
 @media only screen
 and (min-width: 0px)
 and (max-width: 1000px)
