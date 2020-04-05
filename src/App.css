@@ -132,7 +132,10 @@ footer {
   font-size: 1.1em;
   font-weight: bolder;
   color: white;
-  padding-left: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
 
 .uk-pagination li  {
